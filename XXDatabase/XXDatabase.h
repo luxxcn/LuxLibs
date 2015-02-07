@@ -25,7 +25,6 @@
 - (NSInteger) executeSQL:(NSString *)sql;
 - (NSArray *) query:(NSString *)sql; //一行结果
 - (NSArray *) queryResults:(NSString *)sql;
-- (NSArray *) fetchRow:(MYSQL_RES *)result;
 - (NSString *) getLastError;
 - (void)close;
 

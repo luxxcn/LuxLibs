@@ -20,7 +20,6 @@
 
 - (BOOL)initWithHost:(NSString *)host port:(unsigned int)port user:(NSString *)user password:(NSString *)password dbName:(NSString *)dbName
 {
-    
     _host = host;
     _port = port;
     _user = user;
