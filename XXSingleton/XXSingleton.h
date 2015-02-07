@@ -2,6 +2,8 @@
 //  XXSingleton.h
 //  DownLoadBankNumbers
 //
+//  单例对象
+//
 //  Created by xxing on 15/2/7.
 //  Copyright (c) 2015年 xxing. All rights reserved.
 //
