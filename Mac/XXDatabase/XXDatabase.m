@@ -9,7 +9,17 @@
 #import "XXDatabase.h"
 #import <errmsg.h>
 
+@interface XXDatabase()
 
+@property (strong, nonatomic) NSString *host;   // 保存连接信息用于连接失败后重连
+@property (strong, nonatomic) NSString *user;
+@property (strong, nonatomic) NSString *password;
+@property (strong, nonatomic) NSString *dbName;
+@property unsigned int port;
+@property NSInteger lastError;
+@property (strong, nonatomic) NSString *lastErrorInfo;
+
+@end
 
 @implementation XXDatabase
 
