@@ -25,6 +25,8 @@ int main(int argc, const char * argv[]) {
         int choose;
         scanf("%d", &choose);
         printf("%d", choose);
+        
+        [sDatabase close];
     }
     return 0;
 }

@@ -24,7 +24,7 @@
 
 - (instancetype)init
 {
-        self = [super init];
+    self = [super init];
     
     if(self) {
         //单例第一次初始化时调用
