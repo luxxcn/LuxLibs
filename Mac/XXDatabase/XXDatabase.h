@@ -18,14 +18,19 @@
     MYSQL *mysql;
 }
 
-- (BOOL) initWithHost:(NSString *)host port:(unsigned int)port user:(NSString *)user password:(NSString *)password dbName:(NSString *)dbName;
+- (BOOL)initWithHost:(NSString *)host port:(unsigned int)port user:(NSString *)user password:(NSString *)password dbName:(NSString *)dbName;
 
 + (XXDatabase *)sharedInstance;
 
-- (NSInteger) executeSQL:(NSString *)sql;
-- (NSArray *) query:(NSString *)sql; //一行结果
-- (NSArray *) queryResults:(NSString *)sql;
-- (NSString *) getLastError;
+- (NSInteger)executeSQLWithFormat:(NSString *)format, ...;
+- (NSInteger)executeSQL:(NSString *)sql;
+
+- (NSArray *)queryRowWithFormat:(NSString *)format, ...;
+- (NSArray *)queryRow:(NSString *)sql; //一行结果
+- (NSArray *)queryResultWithFormat:(NSString *)format, ...;
+- (NSArray *)queryResult:(NSString *)sql;
+
+- (NSString *)getLastError;
 - (void)close;
 
 @property (strong, nonatomic) NSString *host;   // 保存连接信息用于连接失败后重连

@@ -39,6 +39,17 @@
     return NO;
 }
 
+- (NSInteger)executeSQLWithFormat:(NSString *)format, ...
+{
+    NSString *sql;
+    va_list args;
+    va_start(args, format);
+    sql = [[NSString alloc] initWithFormat:format arguments:args];
+    va_end(args);
+    
+    return [self executeSQL:sql];
+}
+
 - (NSInteger)executeSQL:(NSString *)sql
 {
     NSInteger affectedRows = -1;
@@ -47,23 +58,47 @@
         _lastError = mysql_query(mysql, [sql UTF8String]);
         if(_lastError == 0) // success
             affectedRows = mysql_affected_rows(mysql);
+        else if(_lastError == CR_SERVER_LOST)
+        {
+            if([self initWithHost:_host port:_port user:_user password:_password dbName:_dbName])
+                [self executeSQL:sql];
+        }
     }
     
     return affectedRows;
 }
 
-- (NSArray *) query:(NSString *)sql
+- (NSArray *)queryRowWithFormat:(NSString *)format, ...
 {
-    NSArray *row;
-    if([self executeSQL:sql] == -1)
-    {
-        MYSQL_RES *result = mysql_store_result(mysql);
-        row = [self fetchRow:result];
-    }
-    return row;
+    NSString *sql;
+    va_list args;
+    va_start(args, format);
+    sql = [[NSString alloc] initWithFormat:format arguments:args];
+    va_end(args);
+    
+    return [self queryRow:sql];
 }
 
-- (NSArray *)queryResults:(NSString *)sql
+- (NSArray *)queryRow:(NSString *)sql
+{
+    NSArray *row = [self queryResult:sql];
+    if(row.count > 0)
+        return row[0];
+    return nil;
+}
+
+- (NSArray *)queryResultWithFormat:(NSString *)format, ...
+{
+    NSString *sql;
+    va_list args;
+    va_start(args, format);
+    sql = [[NSString alloc] initWithFormat:format arguments:args];
+    va_end(args);
+    
+    return [self queryResult:sql];
+}
+
+- (NSArray *)queryResult:(NSString *)sql
 {
     NSMutableArray *resultArray = [[NSMutableArray alloc] init];
     if([self executeSQL:sql] == -1)
@@ -79,7 +114,7 @@
     return resultArray;
 }
 
-- (NSArray *) fetchRow:(MYSQL_RES *)result
+- (NSArray *)fetchRow:(MYSQL_RES *)result
 {
     MYSQL_ROW row;
     int fieldCount = mysql_field_count(mysql);
