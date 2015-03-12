@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		3311182B1AB1BDCB00F2A41D /* XXShareHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3311182A1AB1BDCB00F2A41D /* XXShareHelper.m */; };
 		331118301AB1BDEC00F2A41D /* XXSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3311182F1AB1BDEC00F2A41D /* XXSingleton.m */; };
+		33324F7A1AB1E60500A9171A /* read_me.txt in Resources */ = {isa = PBXBuildFile; fileRef = 33324F761AB1E60500A9171A /* read_me.txt */; };
+		33324F7B1AB1E62C00A9171A /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33324F751AB1E60500A9171A /* libWeChatSDK.a */; };
+		33324F7E1AB1E71600A9171A /* share_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 33324F7D1AB1E71600A9171A /* share_image.png */; };
 		33CB20B31AADBD2F00EBEB01 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CB20B21AADBD2F00EBEB01 /* main.m */; };
 		33CB20B61AADBD2F00EBEB01 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CB20B51AADBD2F00EBEB01 /* AppDelegate.m */; };
 		33CB20B91AADBD2F00EBEB01 /* LuxLibsIOSTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 33CB20B71AADBD2F00EBEB01 /* LuxLibsIOSTest.xcdatamodeld */; };
@@ -34,6 +37,11 @@
 		3311182A1AB1BDCB00F2A41D /* XXShareHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XXShareHelper.m; path = ../XXShareHelper/XXShareHelper.m; sourceTree = "<group>"; };
 		3311182E1AB1BDEC00F2A41D /* XXSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXSingleton.h; sourceTree = "<group>"; };
 		3311182F1AB1BDEC00F2A41D /* XXSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXSingleton.m; sourceTree = "<group>"; };
+		33324F751AB1E60500A9171A /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libWeChatSDK.a; path = ../WeChatSDK/libWeChatSDK.a; sourceTree = "<group>"; };
+		33324F761AB1E60500A9171A /* read_me.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = read_me.txt; path = ../WeChatSDK/read_me.txt; sourceTree = "<group>"; };
+		33324F771AB1E60500A9171A /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WXApi.h; path = ../WeChatSDK/WXApi.h; sourceTree = "<group>"; };
+		33324F781AB1E60500A9171A /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WXApiObject.h; path = ../WeChatSDK/WXApiObject.h; sourceTree = "<group>"; };
+		33324F7D1AB1E71600A9171A /* share_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = share_image.png; path = images/share_image.png; sourceTree = "<group>"; };
 		33CB20AD1AADBD2F00EBEB01 /* LuxLibsIOSTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LuxLibsIOSTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33CB20B11AADBD2F00EBEB01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33CB20B21AADBD2F00EBEB01 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -55,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33324F7B1AB1E62C00A9171A /* libWeChatSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +80,7 @@
 		3311182C1AB1BDD100F2A41D /* XXShareHelper */ = {
 			isa = PBXGroup;
 			children = (
+				33324F6E1AB1DF2700A9171A /* WeChatSDK */,
 				331118291AB1BDCB00F2A41D /* XXShareHelper.h */,
 				3311182A1AB1BDCB00F2A41D /* XXShareHelper.m */,
 			);
@@ -85,6 +95,26 @@
 			);
 			name = XXSingleton;
 			path = ../XXSingleton;
+			sourceTree = "<group>";
+		};
+		33324F6E1AB1DF2700A9171A /* WeChatSDK */ = {
+			isa = PBXGroup;
+			children = (
+				33324F751AB1E60500A9171A /* libWeChatSDK.a */,
+				33324F761AB1E60500A9171A /* read_me.txt */,
+				33324F771AB1E60500A9171A /* WXApi.h */,
+				33324F781AB1E60500A9171A /* WXApiObject.h */,
+			);
+			name = WeChatSDK;
+			path = ../XXShareHelper/WeChatSDK_1.5_OnlyIphone;
+			sourceTree = "<group>";
+		};
+		33324F7C1AB1E6F800A9171A /* images */ = {
+			isa = PBXGroup;
+			children = (
+				33324F7D1AB1E71600A9171A /* share_image.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 		33CB20A41AADBD2F00EBEB01 = {
@@ -110,6 +140,7 @@
 		33CB20AF1AADBD2F00EBEB01 /* LuxLibsIOSTest */ = {
 			isa = PBXGroup;
 			children = (
+				33324F7C1AB1E6F800A9171A /* images */,
 				33CB20B41AADBD2F00EBEB01 /* AppDelegate.h */,
 				33CB20B51AADBD2F00EBEB01 /* AppDelegate.m */,
 				33CB20BA1AADBD2F00EBEB01 /* ViewController.h */,
@@ -231,6 +262,8 @@
 			files = (
 				33CB20BF1AADBD2F00EBEB01 /* Main.storyboard in Resources */,
 				33CB20C41AADBD2F00EBEB01 /* LaunchScreen.xib in Resources */,
+				33324F7A1AB1E60500A9171A /* read_me.txt in Resources */,
+				33324F7E1AB1E71600A9171A /* share_image.png in Resources */,
 				33CB20C11AADBD2F00EBEB01 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -378,6 +411,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LuxLibsIOSTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/xxing/Desktop/MacOSDev/LuxLibs/Mac/XXShareHelper/WeChatSDK,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -388,6 +425,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LuxLibsIOSTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/xxing/Desktop/MacOSDev/LuxLibs/Mac/XXShareHelper/WeChatSDK,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

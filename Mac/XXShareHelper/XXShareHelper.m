@@ -11,9 +11,22 @@
 
 @implementation XXShareHelper
 
++ (XXShareHelper *)sharedInstance
+{
+    return (XXShareHelper *)[super sharedInstance];
+}
+
 - (BOOL)isWechatInstalled
 {
-    return NO;
+    BOOL bWechatInstalled = [WXApi isWXAppInstalled];
+    
+    if(!bWechatInstalled)
+    {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"未安装微信" message:@"该功能需要安装微信" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:nil, nil];
+        [alertView show];
+    }
+    
+    return bWechatInstalled;
 }
 
 @end

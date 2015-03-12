@@ -8,11 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import "XXSingleton.h"
+#import <UIKit/UIKit.h>
+#import "WXApi.h"
 
 #define sShareHelper [XXShareHelper sharedInstance]
 
-@interface XXShareHelper : XXSingleton
+@interface XXShareHelper : XXSingleton<WXApiDelegate>
 
-- (BOOL)isWechatInstalled;
++ (XXShareHelper *)sharedInstance;
+
+- (BOOL) isWechatInstalled;
 
 @end
