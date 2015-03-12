@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3311182B1AB1BDCB00F2A41D /* XXShareHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3311182A1AB1BDCB00F2A41D /* XXShareHelper.m */; };
+		331118301AB1BDEC00F2A41D /* XXSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3311182F1AB1BDEC00F2A41D /* XXSingleton.m */; };
 		33CB20B31AADBD2F00EBEB01 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CB20B21AADBD2F00EBEB01 /* main.m */; };
 		33CB20B61AADBD2F00EBEB01 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CB20B51AADBD2F00EBEB01 /* AppDelegate.m */; };
 		33CB20B91AADBD2F00EBEB01 /* LuxLibsIOSTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 33CB20B71AADBD2F00EBEB01 /* LuxLibsIOSTest.xcdatamodeld */; };
@@ -28,6 +30,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		331118291AB1BDCB00F2A41D /* XXShareHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XXShareHelper.h; path = ../XXShareHelper/XXShareHelper.h; sourceTree = "<group>"; };
+		3311182A1AB1BDCB00F2A41D /* XXShareHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XXShareHelper.m; path = ../XXShareHelper/XXShareHelper.m; sourceTree = "<group>"; };
+		3311182E1AB1BDEC00F2A41D /* XXSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXSingleton.h; sourceTree = "<group>"; };
+		3311182F1AB1BDEC00F2A41D /* XXSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXSingleton.m; sourceTree = "<group>"; };
 		33CB20AD1AADBD2F00EBEB01 /* LuxLibsIOSTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LuxLibsIOSTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33CB20B11AADBD2F00EBEB01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33CB20B21AADBD2F00EBEB01 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -62,9 +68,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3311182C1AB1BDD100F2A41D /* XXShareHelper */ = {
+			isa = PBXGroup;
+			children = (
+				331118291AB1BDCB00F2A41D /* XXShareHelper.h */,
+				3311182A1AB1BDCB00F2A41D /* XXShareHelper.m */,
+			);
+			name = XXShareHelper;
+			sourceTree = "<group>";
+		};
+		3311182D1AB1BDEC00F2A41D /* XXSingleton */ = {
+			isa = PBXGroup;
+			children = (
+				3311182E1AB1BDEC00F2A41D /* XXSingleton.h */,
+				3311182F1AB1BDEC00F2A41D /* XXSingleton.m */,
+			);
+			name = XXSingleton;
+			path = ../XXSingleton;
+			sourceTree = "<group>";
+		};
 		33CB20A41AADBD2F00EBEB01 = {
 			isa = PBXGroup;
 			children = (
+				3311182D1AB1BDEC00F2A41D /* XXSingleton */,
+				3311182C1AB1BDD100F2A41D /* XXShareHelper */,
 				33CB20AF1AADBD2F00EBEB01 /* LuxLibsIOSTest */,
 				33CB20CC1AADBD2F00EBEB01 /* LuxLibsIOSTestTests */,
 				33CB20AE1AADBD2F00EBEB01 /* Products */,
@@ -224,8 +251,10 @@
 			files = (
 				33CB20B61AADBD2F00EBEB01 /* AppDelegate.m in Sources */,
 				33CB20B91AADBD2F00EBEB01 /* LuxLibsIOSTest.xcdatamodeld in Sources */,
+				3311182B1AB1BDCB00F2A41D /* XXShareHelper.m in Sources */,
 				33CB20BC1AADBD2F00EBEB01 /* ViewController.m in Sources */,
 				33CB20B31AADBD2F00EBEB01 /* main.m in Sources */,
+				331118301AB1BDEC00F2A41D /* XXSingleton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +445,7 @@
 				33CB20D51AADBD2F00EBEB01 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		33CB20D61AADBD2F00EBEB01 /* Build configuration list for PBXNativeTarget "LuxLibsIOSTestTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +454,7 @@
 				33CB20D81AADBD2F00EBEB01 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
