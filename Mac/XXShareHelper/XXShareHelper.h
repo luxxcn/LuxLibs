@@ -17,6 +17,8 @@
 
 + (XXShareHelper *)sharedInstance;
 
-- (BOOL) isWechatInstalled;
+- (BOOL)isWechatInstalled;
+
+- (BOOL)shareImageToWechat:(UIImage *)image;
 
 @end

@@ -29,4 +29,9 @@
     return bWechatInstalled;
 }
 
+- (BOOL)shareImageToWechat:(UIImage *)image
+{
+    return NO;
+}
+
 @end
