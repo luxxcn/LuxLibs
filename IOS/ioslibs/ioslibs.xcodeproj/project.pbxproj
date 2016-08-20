@@ -17,6 +17,7 @@
 		3301D40C1D4E40F700E74562 /* ioslibsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3301D40B1D4E40F700E74562 /* ioslibsUITests.swift */; };
 		3301D41C1D4E415E00E74562 /* DateTimeHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3301D41A1D4E415E00E74562 /* DateTimeHandle.swift */; };
 		3301D41D1D4E415E00E74562 /* MoneyHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3301D41B1D4E415E00E74562 /* MoneyHandle.swift */; };
+		334A4FCB1D68303C007A7306 /* GuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334A4FCA1D68303C007A7306 /* GuideViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		3301D40D1D4E40F700E74562 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3301D41A1D4E415E00E74562 /* DateTimeHandle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateTimeHandle.swift; path = libs/DateTimeHandle.swift; sourceTree = "<group>"; };
 		3301D41B1D4E415E00E74562 /* MoneyHandle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoneyHandle.swift; path = libs/MoneyHandle.swift; sourceTree = "<group>"; };
+		334A4FCA1D68303C007A7306 /* GuideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GuideViewController.swift; path = libs/GuideViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 		3301D4191D4E411600E74562 /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				334A4FCA1D68303C007A7306 /* GuideViewController.swift */,
 				3301D41A1D4E415E00E74562 /* DateTimeHandle.swift */,
 				3301D41B1D4E415E00E74562 /* MoneyHandle.swift */,
 			);
@@ -278,6 +281,7 @@
 				3301D3EB1D4E40F600E74562 /* ViewController.swift in Sources */,
 				3301D3E91D4E40F600E74562 /* AppDelegate.swift in Sources */,
 				3301D3F11D4E40F600E74562 /* ioslibs.xcdatamodeld in Sources */,
+				334A4FCB1D68303C007A7306 /* GuideViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,6 +506,7 @@
 				3301D4121D4E40F700E74562 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3301D4131D4E40F700E74562 /* Build configuration list for PBXNativeTarget "ioslibsTests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +515,7 @@
 				3301D4151D4E40F700E74562 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3301D4161D4E40F700E74562 /* Build configuration list for PBXNativeTarget "ioslibsUITests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +524,7 @@
 				3301D4181D4E40F700E74562 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -1,6 +1,7 @@
 //
 //  MoneyCtrl.swift
 //  billcalc
+//  金额管理，如添加逗号分隔等
 //
 //  Created by xxing on 16/3/29.
 //  Copyright © 2016年 xxing. All rights reserved.
