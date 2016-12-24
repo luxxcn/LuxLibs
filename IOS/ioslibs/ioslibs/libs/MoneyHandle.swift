@@ -1,7 +1,6 @@
 //
 //  MoneyCtrl.swift
 //  billcalc
-//  金额管理，如添加逗号分隔等
 //
 //  Created by xxing on 16/3/29.
 //  Copyright © 2016年 xxing. All rights reserved.
@@ -15,44 +14,46 @@ class MoneyHandle: NSObject {
     
     static let sMoneyHandle = MoneyHandle()
     
-    let numberFmt = NSNumberFormatter()
+    let numberFmt = NumberFormatter()
     
-    private override init() {
-        numberFmt.locale = NSLocale.currentLocale()
-        numberFmt.numberStyle = NSNumberFormatterStyle.DecimalStyle
-        numberFmt.roundingMode = NSNumberFormatterRoundingMode.RoundFloor
+    fileprivate override init() {
+        numberFmt.locale = Locale.current
+        numberFmt.numberStyle = NumberFormatter.Style.decimal
+        numberFmt.roundingMode = NumberFormatter.RoundingMode.floor
     }
     
     // set, true格式化，false还原
-    func formatMoney(money:String, set:Bool)->String {
-        var content = money
-        let number = numberFmt.numberFromString(money)
-        if(set)
-        {
-            content = numberFmt.stringFromNumber(number!)!
+    func format(money: String, set: Bool = true)->String {
+        
+        let range = money.range(of: ".")
+        var content = range != nil ?
+            money.substring(to: (range?.lowerBound)!) : money
+        let number = numberFmt.number(from: content)
+        
+        if number != nil {
+            content = set ?
+                numberFmt.string(from: number!)! : (number?.stringValue)!
         }
-        else
-        {
-            content = (number?.stringValue)!
+        
+        if range != nil {
+            content.append(money.substring(from: (range?.lowerBound)!))
         }
+        
         return content
     }
     
-    func wanYuan(money:Double)->String{
-        let result = money / 10000.00
-        /*var unit = "万"
-        if(result >= 10000)
-        {
-        result /= 10000.00
-        unit = "亿"
-        }
-        else if(result >= 1000)
-        {
-        result /= 1000.00
-        unit = "千万"
-        }
-        */
-        NSLog("money:%f", money)
-        return result == 0 ? "" : String(format: "%@万", formatMoney(String(result), set:true))
+    func format(money: Double) -> String {
+        
+        return format(money: String(format:"%.2f", money))
+    }
+    
+    func unformat(money: String) -> String {
+        return format(money: money, set: false)
+    }
+    
+    func wanYuan(_ money:Double)->String{
+        let result = String(format: "%.2f", money / 10000.00)
+        return money == 0.0 ?
+            "" : String(format: "%@万", format(money: result))
     }
 }
