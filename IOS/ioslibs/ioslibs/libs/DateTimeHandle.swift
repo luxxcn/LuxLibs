@@ -384,7 +384,7 @@ class DateTimeHandle: NSObject {
         if days == 0 {
             if comp.weekday! == 7 { // 周六
                 days = 2
-            } else if comp.weekday! == 0 { // 周日
+            } else if comp.weekday! == 1 { // 周日
                 days = 1
             }
         }
