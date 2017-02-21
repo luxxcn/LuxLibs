@@ -11,7 +11,7 @@ import UIKit
 let sDateTimeHandle = DateTimeHandle()
 
 let D_DAY:Int = 24 * 3600
-let WEEK_CN:[String] = ["日", "一", "二", "三", "四", "五", "六"]
+let WEEK_CN:[String] = ["", "日", "一", "二", "三", "四", "五", "六"]
 
 extension Date {
     func weekday()->Int{
@@ -63,6 +63,18 @@ extension Date {
         return false;
     }
     
+    func maxDay() -> Int {
+        
+        switch components().month! {
+        case 1, 3, 5, 7, 8, 10, 12:
+            return 31
+        case 2:
+            return isLeapYear() ? 29 : 28
+        default:
+            return 30
+        }
+    }
+    
 }
 
 class DateTimeHandle: NSObject {
@@ -70,13 +82,10 @@ class DateTimeHandle: NSObject {
     var dateFormatter = DateFormatter()
     let holidaysCN = ["1-1":"春节", "1-2":"春节", "1-3":"春节", "1-4":"春节",
                       "1-5":"春节", "1-6":"春节", "1-7":"春节",//春节默认7天假
-        "1-15":"元宵", "5-5":"端午", "7-7":"七夕", "7-15":"中元",
-        "8-15":"中秋", "9-9":"重阳", "12-8":"腊八", "12-30":"除夕"]
-    let holidays = ["1-1":"元旦", "2-14":"情人", "3-8":"妇女", "3-12":"植树",
-                    "5-1":"劳动", "5-4":"青年", "6-1":"儿童", "7-1":"建党",
-                    "8-1":"建军", "9-10":"教师", "10-1":"国庆", "10-2":"国庆",
+        "5-5":"端午", "8-15":"中秋", "12-30":"除夕"]
+    let holidays = ["1-1":"元旦", "5-1":"劳动","10-1":"国庆", "10-2":"国庆",
                     "10-3":"国庆", "10-4":"国庆", "10-5":"国庆", "10-6":"国庆",
-                    "10-7":"国庆", "12-25":"圣诞"]
+                    "10-7":"国庆"]
     let chineseDays = ["小寒", "大寒", "立春", "雨水", "惊蛰", "春分",
                        "清明", "谷雨", "立夏", "小满", "芒种", "夏至",
                        "小暑", "大暑", "立秋", "处暑", "白露", "秋分",
@@ -241,6 +250,18 @@ class DateTimeHandle: NSObject {
         return false;
     }
     
+    func maxDayFor(year: Int, month: Int) -> Int{
+        
+        switch month {
+        case 1, 3, 5, 7, 8, 10, 12:
+            return 31
+        case 2:
+            return isLeapYear(year: year) ? 29 : 28
+        default:
+            return 30
+        }
+    }
+    
     // 日期格式是否正确
     func isValidDate(year:Int, month:Int, day:Int)->Bool {
         
@@ -329,9 +350,13 @@ class DateTimeHandle: NSObject {
             
             //holiday = sloarTerm(from: from)
         }
-        holiday = holiday == nil ? string(from: from, format: "EE") : holiday
+        //holiday = holiday == nil ? string(from: from, format: "EE") : holiday
+        var str = string(from: from, format: "EE")
+        if holiday != nil {
+            str.append(String(format: " %@", holiday!))
+        }
         
-        return holiday!
+        return str
     }
     
     /// 获取放假天数 TODO：根据假日办的安排来计算
@@ -364,6 +389,7 @@ class DateTimeHandle: NSObject {
             }
             break
         }
+        
         
         // 公历节假日
         if days == 0 {
@@ -402,6 +428,36 @@ class DateTimeHandle: NSObject {
         
         dateFormatter.dateFormat = format
         return dateFormatter.date(from: from)
+    }
+    
+    /// 去除时间影响
+    func clearDate(from: Date) -> Date? {
+        
+        let string = self.string(from: from)
+        return date(from: string)
+    }
+    
+    /// 几个月以后，日子设置为相同
+    func monthsLater(from: Date, months: Int) -> Date? {
+        
+        let endDate = Date(timeInterval: TimeInterval(months * 30 * D_DAY),
+                           since: from)
+        let comp = endDate.components()
+        var day = from.components().day!
+        switch comp.month! {
+        case 4, 6, 9, 11:
+            day = day > 30 ? 30 : day
+        case 2:
+            if endDate.isLeapYear() {
+                day = day > 29 ? 29 : day
+            } else {
+                day = day > 28 ? 28 : day
+            }
+        default:
+            break
+        }
+        
+        return createDate(year: comp.year!, month: comp.month!, day: day)
     }
     
 }
