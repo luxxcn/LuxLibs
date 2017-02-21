@@ -22,7 +22,7 @@ class MoneyHandle: NSObject {
         numberFmt.roundingMode = NumberFormatter.RoundingMode.floor
     }
     
-    // set, true格式化，false还原
+    // set, true格式化，false还原   格式: 1,000,000.00
     func format(money: String, set: Bool = true)->String {
         
         let range = money.range(of: ".")

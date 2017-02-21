@@ -19,6 +19,7 @@
 		3301D41D1D4E415E00E74562 /* MoneyHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3301D41B1D4E415E00E74562 /* MoneyHandle.swift */; };
 		331BE0BD1E12B12300D69C88 /* ColorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331BE0BC1E12B12300D69C88 /* ColorHelper.swift */; };
 		334A4FCB1D68303C007A7306 /* GuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334A4FCA1D68303C007A7306 /* GuideViewController.swift */; };
+		3359F0151E5C8A66000E8233 /* StringHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3359F0141E5C8A66000E8233 /* StringHandle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		3301D41B1D4E415E00E74562 /* MoneyHandle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoneyHandle.swift; path = libs/MoneyHandle.swift; sourceTree = "<group>"; };
 		331BE0BC1E12B12300D69C88 /* ColorHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorHelper.swift; sourceTree = "<group>"; };
 		334A4FCA1D68303C007A7306 /* GuideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GuideViewController.swift; path = libs/GuideViewController.swift; sourceTree = "<group>"; };
+		3359F0141E5C8A66000E8233 /* StringHandle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringHandle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 		3301D4191D4E411600E74562 /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				3359F0141E5C8A66000E8233 /* StringHandle.swift */,
 				331BE0BC1E12B12300D69C88 /* ColorHelper.swift */,
 				334A4FCA1D68303C007A7306 /* GuideViewController.swift */,
 				3301D41A1D4E415E00E74562 /* DateTimeHandle.swift */,
@@ -283,6 +286,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3359F0151E5C8A66000E8233 /* StringHandle.swift in Sources */,
 				3301D41D1D4E415E00E74562 /* MoneyHandle.swift in Sources */,
 				3301D41C1D4E415E00E74562 /* DateTimeHandle.swift in Sources */,
 				3301D3EB1D4E40F600E74562 /* ViewController.swift in Sources */,
