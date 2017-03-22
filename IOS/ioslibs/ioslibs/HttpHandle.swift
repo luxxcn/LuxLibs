@@ -13,13 +13,13 @@ let sHttpHandle = HttpHandle()
 class HttpHandle: NSObject {
     
     // MARK:- get请求
-    func getWithPath(path: String,paras: Dictionary<String,Any>?,success: @escaping ((_ result: Any) -> ()),failure: @escaping ((_ error: Error) -> ())) {
+    func getWithPath(path: String,params: Dictionary<String,Any>?,success: @escaping ((_ result: Any) -> ()),failure: @escaping ((_ error: Error) -> ())) {
         
         var i = 0
         var address = path
-        if let paras = paras {
+        if params != nil {
             
-            for (key,value) in paras {
+            for (key,value) in params! {
                 
                 if i == 0 {
                     
@@ -55,14 +55,14 @@ class HttpHandle: NSObject {
     }
     
     // MARK:- post请求
-    func postWithPath(path: String,paras: Dictionary<String,Any>?,success: @escaping ((_ result: Any) -> ()),failure: @escaping ((_ error: Error) -> ())) {
+    func postWithPath(path: String,params: Dictionary<String,Any>?,success: @escaping ((_ result: Any) -> ()),failure: @escaping ((_ error: Error) -> ())) {
         
         var i = 0
         var address: String = ""
         
-        if let paras = paras {
+        if let params = params {
             
-            for (key,value) in paras {
+            for (key,value) in params {
                 
                 if i == 0 {
                     
