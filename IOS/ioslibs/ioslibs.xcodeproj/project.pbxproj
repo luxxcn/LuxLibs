@@ -20,6 +20,7 @@
 		331BE0BD1E12B12300D69C88 /* ColorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331BE0BC1E12B12300D69C88 /* ColorHelper.swift */; };
 		334A4FCB1D68303C007A7306 /* GuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334A4FCA1D68303C007A7306 /* GuideViewController.swift */; };
 		3359F0151E5C8A66000E8233 /* StringHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3359F0141E5C8A66000E8233 /* StringHandle.swift */; };
+		338FEF361E82BB1200724E53 /* HttpHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338FEF351E82BB1200724E53 /* HttpHandle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		331BE0BC1E12B12300D69C88 /* ColorHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorHelper.swift; sourceTree = "<group>"; };
 		334A4FCA1D68303C007A7306 /* GuideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GuideViewController.swift; path = libs/GuideViewController.swift; sourceTree = "<group>"; };
 		3359F0141E5C8A66000E8233 /* StringHandle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringHandle.swift; sourceTree = "<group>"; };
+		338FEF351E82BB1200724E53 /* HttpHandle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpHandle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				3359F0141E5C8A66000E8233 /* StringHandle.swift */,
+				338FEF351E82BB1200724E53 /* HttpHandle.swift */,
 				331BE0BC1E12B12300D69C88 /* ColorHelper.swift */,
 				334A4FCA1D68303C007A7306 /* GuideViewController.swift */,
 				3301D41A1D4E415E00E74562 /* DateTimeHandle.swift */,
@@ -287,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3359F0151E5C8A66000E8233 /* StringHandle.swift in Sources */,
+				338FEF361E82BB1200724E53 /* HttpHandle.swift in Sources */,
 				3301D41D1D4E415E00E74562 /* MoneyHandle.swift in Sources */,
 				3301D41C1D4E415E00E74562 /* DateTimeHandle.swift in Sources */,
 				3301D3EB1D4E40F600E74562 /* ViewController.swift in Sources */,
