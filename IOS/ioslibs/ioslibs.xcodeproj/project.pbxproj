@@ -58,6 +58,7 @@
 		3301D41A1D4E415E00E74562 /* DateTimeHandle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateTimeHandle.swift; path = libs/DateTimeHandle.swift; sourceTree = "<group>"; };
 		3301D41B1D4E415E00E74562 /* MoneyHandle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoneyHandle.swift; path = libs/MoneyHandle.swift; sourceTree = "<group>"; };
 		331BE0BC1E12B12300D69C88 /* ColorHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorHelper.swift; sourceTree = "<group>"; };
+		332BE3F41E93269D00E3CDDE /* ObjectC-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ObjectC-Bridging-Header.h"; sourceTree = "<group>"; };
 		334A4FCA1D68303C007A7306 /* GuideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GuideViewController.swift; path = libs/GuideViewController.swift; sourceTree = "<group>"; };
 		3359F0141E5C8A66000E8233 /* StringHandle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringHandle.swift; sourceTree = "<group>"; };
 		338FEF351E82BB1200724E53 /* HttpHandle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpHandle.swift; sourceTree = "<group>"; };
@@ -145,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				3359F0141E5C8A66000E8233 /* StringHandle.swift */,
+				332BE3F41E93269D00E3CDDE /* ObjectC-Bridging-Header.h */,
 				338FEF351E82BB1200724E53 /* HttpHandle.swift */,
 				331BE0BC1E12B12300D69C88 /* ColorHelper.swift */,
 				334A4FCA1D68303C007A7306 /* GuideViewController.swift */,
@@ -395,6 +397,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "ioslibs/ObjectC-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -435,6 +438,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "ioslibs/ObjectC-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
