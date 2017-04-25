@@ -18,6 +18,7 @@
 		3301D41C1D4E415E00E74562 /* DateTimeHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3301D41A1D4E415E00E74562 /* DateTimeHandle.swift */; };
 		3301D41D1D4E415E00E74562 /* MoneyHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3301D41B1D4E415E00E74562 /* MoneyHandle.swift */; };
 		331BE0BD1E12B12300D69C88 /* ColorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331BE0BC1E12B12300D69C88 /* ColorHelper.swift */; };
+		332AFE181EAF953B00C02494 /* BMTKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332AFE171EAF953B00C02494 /* BMTKeyboard.swift */; };
 		332BE3FB1E93E3F200E3CDDE /* XXPopoverMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332BE3FA1E93E3F200E3CDDE /* XXPopoverMenu.swift */; };
 		334A4FCB1D68303C007A7306 /* GuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334A4FCA1D68303C007A7306 /* GuideViewController.swift */; };
 		3359F0151E5C8A66000E8233 /* StringHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3359F0141E5C8A66000E8233 /* StringHandle.swift */; };
@@ -59,6 +60,7 @@
 		3301D41A1D4E415E00E74562 /* DateTimeHandle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateTimeHandle.swift; path = libs/DateTimeHandle.swift; sourceTree = "<group>"; };
 		3301D41B1D4E415E00E74562 /* MoneyHandle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoneyHandle.swift; path = libs/MoneyHandle.swift; sourceTree = "<group>"; };
 		331BE0BC1E12B12300D69C88 /* ColorHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorHelper.swift; sourceTree = "<group>"; };
+		332AFE171EAF953B00C02494 /* BMTKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMTKeyboard.swift; sourceTree = "<group>"; };
 		332BE3F41E93269D00E3CDDE /* ObjectC-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ObjectC-Bridging-Header.h"; sourceTree = "<group>"; };
 		332BE3FA1E93E3F200E3CDDE /* XXPopoverMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XXPopoverMenu.swift; sourceTree = "<group>"; };
 		334A4FCA1D68303C007A7306 /* GuideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GuideViewController.swift; path = libs/GuideViewController.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 		332BE3F91E93E3A100E3CDDE /* UIControls */ = {
 			isa = PBXGroup;
 			children = (
+				332AFE171EAF953B00C02494 /* BMTKeyboard.swift */,
 				332BE3FA1E93E3F200E3CDDE /* XXPopoverMenu.swift */,
 			);
 			name = UIControls;
@@ -308,6 +311,7 @@
 				3301D41C1D4E415E00E74562 /* DateTimeHandle.swift in Sources */,
 				332BE3FB1E93E3F200E3CDDE /* XXPopoverMenu.swift in Sources */,
 				3301D3EB1D4E40F600E74562 /* ViewController.swift in Sources */,
+				332AFE181EAF953B00C02494 /* BMTKeyboard.swift in Sources */,
 				3301D3E91D4E40F600E74562 /* AppDelegate.swift in Sources */,
 				3301D3F11D4E40F600E74562 /* ioslibs.xcdatamodeld in Sources */,
 				331BE0BD1E12B12300D69C88 /* ColorHelper.swift in Sources */,
